@@ -29,6 +29,7 @@ body, a:link, a:visited, a:active{
   position:absolute;
   height: 50px;
   width: 50px;
+  border-radius: 25px;
   background-image: url("http://www.placecage.com/c/50/50");
   -webkit-animation:spin 1s linear infinite;
       -moz-animation:spin 1s linear infinite;

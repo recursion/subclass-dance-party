@@ -38,8 +38,12 @@ $(document).ready(function(){
      dancers[i].$node.animate({
       top: Math.random()*$('body').height(),
       left: $('body').width()/2
-     }, 500);
+     }, 2000);
     }
   };
+
+  $(".lineUpButton").on("click", function(event){
+    lineUp();
+  });
 });
 
