@@ -24,6 +24,7 @@ $(document).ready(function(){
     // make a dancer with a random position
     
     if (dancerMakerFunctionName === 'CageDancer' && window.cage !== null) {
+      $(this).remove();
       return; 
     } else {
       var dancer = new dancerMakerFunction(
@@ -49,9 +50,6 @@ $(document).ready(function(){
      }, 2000);
     }
   };
-
-
-
 
   $(".lineUpButton").on("click", function(event){
     lineUp();
