@@ -22,13 +22,10 @@ $(document).ready(function(){
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-    
-    if (dancerMakerFunctionName === 'CageDancer') {
-      $(this).hide();
-    }
+
     if (dancerMakerFunctionName === 'CageDancer' && window.cage !== null) {
       $(this).hide();
-      return; 
+      return;
     } else {
       var dancer = new dancerMakerFunction(
         $("body").height() * Math.random(),
@@ -47,9 +44,14 @@ $(document).ready(function(){
 
   window.lineUp = function(){
     for (var i = 0; i < dancers.length; i++) {
+
+      var t = Math.random()*$('body').height();
+      var l = $('body').width()/2;
+      dancers[i].top = t;
+      dancers[i].left = l;
      dancers[i].$node.animate({
-      top: Math.random()*$('body').height(),
-      left: $('body').width()/2
+      top: t,
+      left: l
      }, 2000);
     }
   };
@@ -58,4 +60,3 @@ $(document).ready(function(){
     lineUp();
   });
 });
-
