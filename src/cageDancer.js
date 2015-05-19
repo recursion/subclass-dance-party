@@ -54,4 +54,3 @@ CageDancer.prototype.move = function(){
 
   }
 };
-
