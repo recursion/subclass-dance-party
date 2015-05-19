@@ -23,8 +23,12 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
+    // hide the window once a cage is created
+    if (dancerMakerFunctionName === 'CageDancer') {
+      $this.hide();
+    }
+    // if a cage is already created, just return.
     if (dancerMakerFunctionName === 'CageDancer' && window.cage !== null) {
-      $(this).hide();
       return;
     } else {
       var dancer = new dancerMakerFunction(
