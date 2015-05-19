@@ -42,9 +42,11 @@ CageDancer.prototype.move = function(){
 
   if (cage.top <= 0 || cage.top > windowH - 50) {
     this.vectorX *= -1;
+    cage.top += Math.floor(Math.random() * (this.vectorX - 1) + 1);
   }
 
   if ( cage.left <= 0 || cage.left > windowW - 50) {
     this.vectorY *= -1;
+    cage.left += Math.floor(Math.random() * (this.vectorY - 1) + 1);
   }
 };
