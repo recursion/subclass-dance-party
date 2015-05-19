@@ -8,9 +8,8 @@ var CageDancer = function(top, left, timeBetweenSteps){
       $(this).removeClass( 'big' );
     });
 
-    this.top = top;
-    this.left = left;
-  CageDancer.prototype.move.call(this);
+  this.top = top;
+  this.left = left;
 
 };
 
@@ -28,32 +27,29 @@ CageDancer.prototype.step = function(){
 
 };
 
-  CageDancer.prototype.move = function(){
-    var windowH = $('body').height();
-    var windowW = $('body').width();
-    var cage = this;
+CageDancer.prototype.move = function(){
+  Dancer.prototype.move.call(this);
 
-    var position = {};
-    position.x  = cage.top;
-    position.y = cage.left;
+  var windowH = $('body').height();
+  var windowW = $('body').width();
+  var cage = this;
+  debugger;
 
-    var vectorY = 2;
-    var vectorX = 2;
+  var vectorY = 2;
+  var vectorX = 2;
 
-    setInterval(function(){
-      cage.$node.css({ top: position.x, left: position.y });
-      position.x += vectorX;
-      position.y += vectorY;
+  cage.$node.css({ top: cage.top, left: cage.left });
+  cage.top += vectorX;
+  cage.left += vectorY;
 
-      if (position.x <= 0 ) {
-        vectorX = 1;  
-      } else if (position.x > windowH - 50 ) {
-        vectorX = -1;
-      } else if ( position.y <= 0 ) {
-        vectorY = 3;
-      } else if (position.y > windowW - 50) {
-        vectorY = -3;
-      }
-    }, 10);
-  };
+  if (cage.top <= 0 ) {
+    vectorX = 1;  
+  } else if (cage.top > windowH - 50 ) {
+    vectorX = -1;
+  } else if ( cage.left <= 0 ) {
+    vectorY = 3;
+  } else if (cage.left > windowW - 50) {
+    vectorY = -3;
+  }
+};
 

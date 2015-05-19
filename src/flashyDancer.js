@@ -19,3 +19,13 @@ FlashyDancer.prototype.step = function(){
   this.$node.css('border-color', 'rgb('+r+','+g+','+b+')');
 
 };
+
+FlashyDancer.prototype.move = function() {
+  Dancer.prototype.move.call(this);
+
+  if (window.cage !== null) {
+    if (this.top <= window.cage.top && that.left <= window.cage.left) {
+      this.$node.remove();
+    }  
+  }
+};

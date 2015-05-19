@@ -13,3 +13,13 @@ BlinkyDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
+
+BlinkyDancer.prototype.move = function() {
+  Dancer.prototype.move.call(this);
+
+  if (window.cage !== null) {
+    if (this.top <= window.cage.top && that.left <= window.cage.left) {
+      this.$node.remove();
+    }  
+  }
+};
