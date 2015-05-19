@@ -4,6 +4,9 @@
 logs
 *.log
 
+# swaps
+*.swp
+
 # Runtime data
 pids
 *.pid
