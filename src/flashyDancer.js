@@ -24,7 +24,7 @@ FlashyDancer.prototype.move = function() {
   Dancer.prototype.move.call(this);
 
   if (window.cage !== null) {
-    if (this.top <= window.cage.top && that.left <= window.cage.left) {
+    if (this.top >= window.cage.top && this.top <= window.cage.top + 50 && this.left >= window.cage.left && this.left <= window.cage.left + 50) {
       this.$node.remove();
     }  
   }

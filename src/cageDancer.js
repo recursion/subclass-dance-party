@@ -10,6 +10,8 @@ var CageDancer = function(top, left, timeBetweenSteps){
 
   this.top = top;
   this.left = left;
+  this.vectorX = 4;
+  this.vectorY = 4;
 
 };
 
@@ -33,23 +35,23 @@ CageDancer.prototype.move = function(){
   var windowH = $('body').height();
   var windowW = $('body').width();
   var cage = this;
-  debugger;
-
-  var vectorY = 2;
-  var vectorX = 2;
 
   cage.$node.css({ top: cage.top, left: cage.left });
-  cage.top += vectorX;
-  cage.left += vectorY;
-
+  cage.top += this.vectorX;
+  cage.left += this.vectorY;
+  
   if (cage.top <= 0 ) {
-    vectorX = 1;  
+    this.vectorX = 1;  
+  
   } else if (cage.top > windowH - 50 ) {
-    vectorX = -1;
+    this.vectorX = -1;
+  
   } else if ( cage.left <= 0 ) {
-    vectorY = 3;
+    this.vectorY = 3;
+  
   } else if (cage.left > windowW - 50) {
-    vectorY = -3;
+    this.vectorY = -3;
+
   }
 };
 
