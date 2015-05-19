@@ -1,5 +1,6 @@
 cage follows a random and or predetermined route
 
-cage speeds up and flashes colors on mouseover, maybe play a tune
+cage speeds up and flashes colors on mouseover, 
+    extra: maybe play a tune
 
 other nodes move away from cage if he's close enough
