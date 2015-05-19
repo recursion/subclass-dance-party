@@ -23,6 +23,9 @@ $(document).ready(function(){
 
     // make a dancer with a random position
     
+    if (dancerMakerFunctionName === 'CageDancer') {
+      $(this).hide();
+    }
     if (dancerMakerFunctionName === 'CageDancer' && window.cage !== null) {
       $(this).hide();
       return; 
