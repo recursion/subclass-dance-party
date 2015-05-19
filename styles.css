@@ -30,6 +30,7 @@ body, a:link, a:visited, a:active{
   height: 50px;
   width: 50px;
   border-radius: 25px;
+  z-index: 2;
   background-image: url("http://www.placecage.com/c/50/50");
   -webkit-animation:spin 1s linear infinite;
       -moz-animation:spin 1s linear infinite;
@@ -41,10 +42,10 @@ body, a:link, a:visited, a:active{
   @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .big{
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  background-image: url(http://www.placecage.com/c/200/200);
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-image: url(http://www.placecage.com/c/100/100);
   background-size 100% 100%;
     -webkit-animation:spin 5s linear infinite;
       -moz-animation:spin 5s linear infinite;
