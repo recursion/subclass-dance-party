@@ -25,3 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.cageDancer{
+  position:absolute;
+  height: 50px;
+  width: 50px;
+  background-image: url("http://www.placecage.com/c/50/50");
+}
