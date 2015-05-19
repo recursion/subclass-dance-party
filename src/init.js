@@ -30,6 +30,16 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
 
     window.dancers.push(dancer);
+
   });
+
+  window.lineUp = function(){
+    for (var i = 0; i < dancers.length; i++) {
+     dancers[i].$node.animate({
+      top: Math.random()*$('body').height(),
+      left: $('body').width()/2
+     }, 500);
+    }
+  };
 });
 
