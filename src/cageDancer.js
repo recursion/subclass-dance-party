@@ -1,7 +1,7 @@
 var CageDancer = function(top, left, timeBetweenSteps){
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.removeClass( 'dancer' ).addClass( 'cageDancer' );
-  
+
   this.$node.mouseover(function(){
       $(this).addClass( 'big' );
     }).mouseout(function(){
@@ -39,18 +39,12 @@ CageDancer.prototype.move = function(){
   cage.$node.css({ top: cage.top, left: cage.left });
   cage.top += this.vectorX;
   cage.left += this.vectorY;
-  
-  if (cage.top <= 0 ) {
-    this.vectorX = 1;  
-  
-  } else if (cage.top > windowH - 50 ) {
-    this.vectorX = -1;
-  
-  } else if ( cage.left <= 0 ) {
-    this.vectorY = 3;
-  
-  } else if (cage.left > windowW - 50) {
-    this.vectorY = -3;
 
+  if (cage.top <= 0 || cage.top > windowH - 50) {
+    this.vectorX *= -1;
+  }
+
+  if ( cage.left <= 0 || cage.left > windowW - 50) {
+    this.vectorY *= -1;
   }
 };
