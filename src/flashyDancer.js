@@ -15,8 +15,10 @@ FlashyDancer.prototype.step = function(){
   var r = Math.floor(Math.random() * 255);
   var g = Math.floor(Math.random() * 255);
   var b = Math.floor(Math.random() * 255);
+  var h = Math.floor(Math.random() * 100);
 
   this.$node.css('border-color', 'rgb('+r+','+g+','+b+')');
+  this.$node.css({'height' : 'h', 'width': 'h'});
 
 };
 
@@ -29,3 +31,4 @@ FlashyDancer.prototype.move = function() {
     }  
   }
 };
+

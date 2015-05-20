@@ -11,7 +11,7 @@ var CageDancer = function(top, left, timeBetweenSteps){
   this.top = top;
   this.left = left;
   this.vectorX = 4;
-  this.vectorY = 4;
+  this.vectorY = 3;
 
 };
 
