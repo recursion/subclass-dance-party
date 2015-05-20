@@ -8,7 +8,6 @@
     <script src="src/blinkyDancer.js"></script>
     <script src="src/flashyDancer.js"></script>
     <script src="src/cageDancer.js"></script>
-
   </head>
   <body>
     <div class="topbar">
@@ -17,7 +16,11 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="FlashyDancer">add a flashy dancer</a>
       <a href="#" class="addDancerButton" id="cage" data-dancer-maker-function-name="CageDancer">add a Cage dancer</a>
       <a href="#" class="lineUpButton">Line Up</a>
+      <button onclick="document.getElementById('music').play()">Play Music</button>
+      <button onclick="document.getElementById('music').pause()">Stop Music</button>
     </div>
+    <audio id="music" src="http://goodblimey.com/stream/Volume%202%20(379%20Songs)/50%20Cent%20vs%20Bee%20Gees%20-%20Staying%20Alive%20In%20Da%20Club%20(DJ%20Trip)%20(127).mp3"></audio>
     <script src="src/init.js"></script>
   </body>
 </html>
+
