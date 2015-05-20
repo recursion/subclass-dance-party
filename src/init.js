@@ -53,7 +53,7 @@ $(document).ready(function(){
       var l = $('body').width()/2;
       dancers[i].top = t;
       dancers[i].left = l;
-     dancers[i].$node.animate({
+      dancers[i].$node.animate({
       top: t,
       left: l
      }, 2000);
