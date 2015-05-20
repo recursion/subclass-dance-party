@@ -53,14 +53,26 @@ $(document).ready(function(){
       var l = $('body').width()/2;
       dancers[i].top = t;
       dancers[i].left = l;
-      dancers[i].$node.animate({
-      top: t,
-      left: l
-     }, 2000);
+      dancers[i].$node.animate({top: t,left: l}, 2000);
+    }
+  };
+
+    window.disperse = function(){
+    for (var i = 0; i < dancers.length; i++) {
+
+      var t = Math.random()*$('body').height();
+      var l = Math.random()*$('body').height();
+      dancers[i].top = t;
+      dancers[i].left = l;
+      dancers[i].$node.animate({top: t,left: l}, 2000);
     }
   };
 
   $(".lineUpButton").on("click", function(event){
-    lineUp();
+    lineUp();   
+  });
+    $(".disperse").on("click", function(event){
+    disperse();   
   });
 });
+
