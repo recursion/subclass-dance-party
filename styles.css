@@ -21,8 +21,8 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  border:50px solid;
+  border-radius:50px;
   position:absolute;
 }
 .cageDancer{
@@ -59,7 +59,7 @@ body, a:link, a:visited, a:active{
   background-size: cover;
   background-image: url("http://www.outletshoppers.com/wp-content/themes/outlets/fashion-trends/images/john-travolta-image.png");
   transform: scale(0.5, 0.5);
--ms-transform: scale(0.5, 0.5);
--webkit-transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
 }
 

@@ -17,8 +17,8 @@ FlashyDancer.prototype.step = function(){
   var b = Math.floor(Math.random() * 255);
   var h = Math.floor(Math.random() * 100);
 
-  this.$node.css('border-color', 'rgb('+r+','+g+','+b+')');
-  this.$node.css({'height' : 'h', 'width': 'h'});
+  this.$node.css('border-color', 'rgba('+r+','+g+','+b+',0.25)');
+  // this.$node.css({'height' : h, 'width': h, 'border-radius':h/2});
 
 };
 
@@ -26,7 +26,7 @@ FlashyDancer.prototype.move = function() {
   Dancer.prototype.move.call(this);
 
   if (window.cage !== null) {
-    if (this.top >= window.cage.top && this.top <= window.cage.top + 50 && this.left >= window.cage.left && this.left <= window.cage.left + 50) {
+    if (this.top >= window.cage.top && this.top <= window.cage.top + 40 && this.left >= window.cage.left && this.left <= window.cage.left + 40) {
       this.$node.remove();
     }  
   }

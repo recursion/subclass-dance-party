@@ -19,7 +19,7 @@ BlinkyDancer.prototype.move = function() {
   Dancer.prototype.move.call(this);
 
   if (window.cage) {
-    if (this.top >= window.cage.top && this.top <= window.cage.top + 50 && this.left >= window.cage.left && this.left <= window.cage.left + 50) {
+    if (this.top >= window.cage.top && this.top <= window.cage.top + 40 && this.left >= window.cage.left && this.left <= window.cage.left + 40) {
       this.$node.remove();
     }
   }
