@@ -4,8 +4,10 @@ var CageDancer = function(top, left, timeBetweenSteps){
 
   this.$node.mouseover(function(){
       $(this).addClass( 'big' );
-    }).mouseout(function(){
-      $(this).removeClass( 'big' );
+      var that = this;
+      setTimeout(function() {
+        $(that).removeClass( 'big' );
+      }, 2000);
     });
 
   this.top = top;
